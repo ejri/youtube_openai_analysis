@@ -2,10 +2,8 @@
 Youtube Analyzer 
 </h1>
 
-![Screen shot of the app in Streamlit](https://github.com/ejri/youtube_openai_analysis/blob/main/youtube_analyer.png)
-
+# Streamlit app:
 [![Video demo](https://github.com/ejri/youtube_openai_analysis/blob/main/youtube_analyer.png)](https://youtu.be/Vd-_E6m9vm0)
-
 
 # youtube_openai_analysis
 A simple app that uses openAI's gpt-3 to summarize a youtube video, transcribe it, and ask questions about the video. All without having to watch the video. 
@@ -100,3 +98,6 @@ Runs ngrok as localhost
 !streamlit run /content/youtube_openai_analysis/app.py
 ```
 
+
+# Click to watch demo video:
+[![Video demo](https://github.com/ejri/youtube_openai_analysis/blob/main/youtube_analyer.png)](https://youtu.be/Vd-_E6m9vm0)
