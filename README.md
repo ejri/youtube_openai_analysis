@@ -9,7 +9,6 @@ A simple app that uses openAI's gpt-3 to summarize a youtube video, transcribe i
 - [x] If video has transcript already, pull transcript
 - [x] Visualize/play the video in the app. 
 - [x] If video doesn't have transcription, use OpenAI's Whisper to transcribe
-- [x] 
 - [x] Use Embeddings to segment the text making it suitable for a chat application 
 - [x] Q&A / chat with the video 
 - [x] Log embeddings, chat, transcription into a pandas dataframe
