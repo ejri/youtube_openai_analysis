@@ -9,6 +9,8 @@ from openai.embeddings_utils import get_embedding, distances_from_embeddings
 import os
 import sys
 from youtube_transcript_api import YouTubeTranscriptApi
+import re
+from time import time,sleep
 
 def get_video_id_from_video_id_or_url(video_id_or_url):
   # if the video id is longer than 11 characters, then it's a url
@@ -73,6 +75,12 @@ def summarize_chunk(index, chunk):
     )
 
     msg = completion.choices[0].text
+    msg = re.sub('\s+', ' ', msg)
+    filename = '%s_log.txt' % time()
+    with open('response_logs/%s' % filename, 'w') as outfile:
+        outfile.write('PROMPT:\n\n' + prompt + '\n\n==========\n\nRESPONSE:\n\n' + msg)
+    with open('response.txt', 'w') as f:
+        f.write(msg)
 
     if diagnostics:
         print(f"# Response: {msg}")
@@ -104,6 +112,12 @@ def summarize_the_summaries(summaries):
     )
 
     overall_msg = completion.choices[0].text
+    overall_msg = re.sub('\s+', ' ', overall_msg)
+    filename = '%s_log.txt' % time()
+    with open('response_logs/%s' % filename, 'w') as outfile:
+        outfile.write('PROMPT:\n\n' + prompt + '\n\n==========\n\nRESPONSE:\n\n' + overall_msg)
+    with open('response.txt', 'w') as f:
+        f.write(overall_msg)
 
     if diagnostics:
         print(f"# Response: {overall_msg}")
@@ -238,7 +252,7 @@ with st.sidebar:
                 st.success('Completed. Check Tabs for details')
 
 st.title("Youtube Analyzer 🤓 ")
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Intro", "Transcription", "Embedding", "Chat with Video", "Summary"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Intro", "Transcription", "Embedding", "Chat with the Video", "Summary"])
 with tab1:
     st.markdown('A simple app that uses openAI\'s gpt-3 to summarize a youtube video, transcribe it, and ask questions about the video. All without having to watch the video. ')
     st.markdown("""---""")
@@ -330,6 +344,13 @@ with tab4:
             temperature=0.5,
         )
         message = completions.choices[0].text
+        message = re.sub('\s+', ' ', message)
+        filename = '%s_log.txt' % time()
+        with open('response_logs/%s' % filename, 'w') as outfile:
+            outfile.write('PROMPT:\n\n' + prompt + '\n\n==========\n\nRESPONSE:\n\n' + message)
+        with open('response.txt', 'w') as f:
+            f.write(message)
+        
         return message
 
     if user_input:
