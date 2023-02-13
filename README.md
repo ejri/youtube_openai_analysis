@@ -9,7 +9,6 @@ A simple app that uses openAI's gpt-3 to summarize a youtube video, transcribe i
 - [x] If video has transcript already, pull transcript
 - [x] Visualize/play the video in the app. 
 - [x] If video doesn't have transcription, use OpenAI's Whisper to transcribe
-- [x] 
 - [x] Use Embeddings to segment the text making it suitable for a chat application 
 - [x] Q&A / chat with the video 
 - [x] Log embeddings, chat, transcription into a pandas dataframe
@@ -66,7 +65,7 @@ if not installed already:
 
 Setup streamlit and ngrok
 ```
-!streamlit run /content/youtube-gpt/app.py &>/dev/null&
+!streamlit run /content/youtube_openai_analysis/app.py &>/dev/null&
 ```
 
 Create an account on ngrok, and paste your authenication token ----
@@ -77,7 +76,7 @@ Create an account on ngrok, and paste your authenication token ----
 making sure it's the correct version on the colab servers
 ```
 !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-!unzip /content/youtube-gpt/ngrok-stable-linux-amd64.zip
+!unzip /content/youtube_openai_analysis/ngrok-stable-linux-amd64.zip
 ```
 
 Setting the server to accept running ngrok
