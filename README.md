@@ -66,7 +66,7 @@ if not installed already:
 
 Setup streamlit and ngrok
 ```
-!streamlit run /content/youtube-gpt/app.py &>/dev/null&
+!streamlit run /content/youtube_openai_analysis/app.py &>/dev/null&
 ```
 
 Create an account on ngrok, and paste your authenication token ----
@@ -77,7 +77,7 @@ Create an account on ngrok, and paste your authenication token ----
 making sure it's the correct version on the colab servers
 ```
 !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-!unzip /content/youtube-gpt/ngrok-stable-linux-amd64.zip
+!unzip /content/youtube_openai_analysis/ngrok-stable-linux-amd64.zip
 ```
 
 Setting the server to accept running ngrok
