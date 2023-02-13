@@ -2,9 +2,9 @@
 Youtube Analyzer 
 </h1>
 
-![Screen shot of the app in Streamlit](/Users/ibrahim/Downloads/youtube_openai_analysis/youtube_analyer.png)
+![Screen shot of the app in Streamlit](https://github.com/ejri/youtube_openai_analysis/blob/main/youtube_analyer.png)
 
-[![Video demo](/Users/ibrahim/Downloads/youtube_openai_analysis/youtube_analyer.png)](https://youtu.be/Vd-_E6m9vm0)
+[![Video demo](https://github.com/ejri/youtube_openai_analysis/blob/main/youtube_analyer.png)](https://youtu.be/Vd-_E6m9vm0)
 
 
 # youtube_openai_analysis
